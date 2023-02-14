@@ -1,33 +1,8 @@
 #Thomas Pelowitz for CS368 on 2/14/23
+import nucleotides as nt
 
-#PROT
-CODON = {
-    "UUU": "F",
-    "UUC": "F",
-    "CUU": "L",
-    "CUC": "L",
-    "AUU": "I",
-    "AUC": "I",
-    "GUU": "V",
-    "GUC": "V"
-}
+def main():
+    print(nt.prot("AUU"))
 
-def prot(s: str) -> str:
-    """
-    Translates an RNA sequence into protein (single-letter notation).
-    """
-
-    current = ""
-    output = ""
-
-    for char in s:
-        current += char
-
-        if len(current) == 3:
-            output += CODON[current]
-            current = ""
-
-    return output
-
-print(prot("AUCGUU"))
-
+if __name__ == "__main__":
+    main()
