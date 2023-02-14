@@ -14,16 +14,16 @@ codon = {
 
 def prot(s: str) -> str:
     """
-    Translates an RNA sequence into protein
+    Translates an RNA sequence into protein (single-letter notation).
     """
 
     current = ""
     output = ""
+
     for char in s:
-        print("Looking at: " + char)
         current += char
+
         if len(current) == 3:
-            print("Adding: " + codon[current])
             output += codon[current]
             current = ""
 
