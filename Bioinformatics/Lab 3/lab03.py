@@ -1,7 +1,7 @@
 #Thomas Pelowitz for CS368 on 2/14/23
 
 #PROT
-codon = {
+CODON = {
     "UUU": "F",
     "UUC": "F",
     "CUU": "L",
@@ -24,7 +24,7 @@ def prot(s: str) -> str:
         current += char
 
         if len(current) == 3:
-            output += codon[current]
+            output += CODON[current]
             current = ""
 
     return output
