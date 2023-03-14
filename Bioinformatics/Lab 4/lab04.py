@@ -11,7 +11,6 @@ def main():
         if m == None:
             break
         
-
     print(nt.dna(seq))
     print(nt.rna(seq))
 
